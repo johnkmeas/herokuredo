@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+ .img-responsive {
+ 	z-index: 1;
+ 	position:fixed;
+ }
+
+ .navbar {
+ 	z-index: 1000;
+ }
+.carousel-inner {
+	z-index: -100;
+	position:fixed;
+}
+
+h1, h2 {
+	font-family: arial;
+	position: relative;
+	z-index: 100;
+	color: grey;
+	margin-top: 45%;
+}
