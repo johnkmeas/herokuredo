@@ -3,10 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background-color: blue;
+	background-color: #cad6eb;
 }
 table {
-	position: relative;
-	z-index: 1000;
-	margin-top: 60%;
+	position: absolute;
+	z-index: 100;
+	margin-top: 50%;
 }

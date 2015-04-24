@@ -13,13 +13,18 @@
  *= require_tree .
  *= require_self
  */
- .img-responsive {
- 	z-index: 1;
+
+ body{
+ 	background-color: #d1dfe0;
+ }
+#logo {
+ 	z-index: -1;
  	position:fixed;
+ 	opacity: 0.5;
  }
 
  .navbar {
- 	z-index: 1000;
+ 	z-index: 2;
  }
 .carousel-inner {
 	z-index: -100;
@@ -28,8 +33,9 @@
 
 h1, h2 {
 	font-family: arial;
-	position: relative;
+	position: absolute;
 	z-index: 100;
 	color: grey;
-	margin-top: 45%;
+	margin-top: 55%;
 }
+
