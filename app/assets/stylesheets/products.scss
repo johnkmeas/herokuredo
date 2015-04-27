@@ -4,9 +4,18 @@
 
 body {
 	background-color: #cad6eb;
+	z-index: 1;
 }
 table {
-	position: absolute;
-	z-index: 100;
-	margin-top: 50%;
+	background-color: #cad6eb;
+	position: static;
+	z-index: 1;
+	margin-top: 10%;
+	
+
+
+}
+
+.image_style { width:25px;
+
 }
