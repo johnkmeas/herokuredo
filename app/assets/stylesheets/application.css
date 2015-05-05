@@ -26,7 +26,10 @@
  .navbar {
  	z-index: 2;
  }
-
+.carousel-inner {
+	z-index: -100;
+	position:fixed;
+}
 
 h1, h2 {
 	font-family: arial;
