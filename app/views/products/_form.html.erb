@@ -23,15 +23,32 @@
     <%= f.label :image_url %><br>
     <%= f.text_field :image_url %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :colour %><br>
     <%= f.text_field :colour %>
-  </div>
+  </div> -->
+  <div class="field">
+    <%= f.label :black %>
+    <%= radio_button("shirt", "colour", "black") %>
+    <%= f.label :white %>
+    <%= radio_button("shirt", "colour", "white") %>
+    <%= f.label :grey %>
+    <%= radio_button("shirt", "colour", "grey") %>
+    <%= f.label :charcoal %>
+    <%= radio_button("shirt", "colour", "charcoal") %>
+    <%= f.label :blue %>
+    <%= radio_button("shirt", "colour", "blue") %>
+    <%= f.label :red %>
+    <%= radio_button("shirt", "colour", "red") %>
+    <%= f.label :green %>
+    <%= radio_button("shirt", "colour", "green") %>
+    <%= f.label :yellow %>
+    <%= radio_button("shirt", "colour", "yellow") %>
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>

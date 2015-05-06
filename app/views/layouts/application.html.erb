@@ -21,6 +21,11 @@
          <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">Digital Stencil</a>
+      <%= form_tag("/products", method: "get") do %>
+        <%= label_tag(:q, "Search for:") %>
+        <%= text_field_tag(:q) %>
+        <%= submit_tag("Search") %>
+      <% end %>
    </div>
    <div class="collapse navbar-collapse" id="example-navbar-collapse">
       <ul class="nav navbar-nav">
