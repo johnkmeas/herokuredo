@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
   	@email = params[:email]
   	@message = params[:message]
   	ActionMailer::Base.mail(:from => @email,
-  		:to => 'johnkmeas@gmail.com'
+  		:to => 'johnkmeas@gmail.com',
   		:subject => "A new contact form message from #{@name}",
   		:body => @message).deliver
   end
