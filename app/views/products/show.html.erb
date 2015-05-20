@@ -35,9 +35,11 @@
         <p><%= "Rating: #{comment.rating}/5" %></p>
         <p><%= comment.body %></p>
       </div>
+      
     <% end %>
   </div>
+ 
+  <%= will_paginate @posts %>
 
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
+
 </div>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :users
+  resources :posts
   get 'static_pages/about'
 
   get 'static_pages/contact'
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'static_pages#index'
-   resources :orders, only: [:index, :show, :new, :create]
+   resources :orders, only: [:index, :show, :new, :create,]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
