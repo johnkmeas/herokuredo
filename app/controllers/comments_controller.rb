@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
 	def create
 		@product = Product.find(params[:product_id])
+		@comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
 		@comment = @product.comments.new(comment_params)
 		@comment.user = current_user
 		respond_to do |format|
@@ -8,7 +9,7 @@ class CommentsController < ApplicationController
 				format.html { redirect_to @product, notice: 'Review was created successfully.' }
 				format.json { render :show, status: :created, location: @product }
 			else
-				format.html { redirect_to @product, alert: 'Review was not successfully.' }
+				format.html { render 'products/show', alert: 'Review was not successfully.' }
 				format.json { render json: @comment.errors, status: :unprocessable_entity }
 			end
 		end
@@ -26,6 +27,6 @@ class CommentsController < ApplicationController
     def comment_params
       params.require(:comment).permit(:name, :description, :image_url, :colour, :rating, :body)
     end
-    
+
 
 end
